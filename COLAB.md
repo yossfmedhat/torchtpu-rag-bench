@@ -1,6 +1,11 @@
 # Running Phase 0–1 on Colab
 
-Runtime > Change runtime type > TPU (v5e-1 or v6e-1). Upload `rag_tpu_bench.py`.
+Runtime > Change runtime type > TPU (v5e-1 or v6e-1). Then:
+
+```bash
+!git clone https://github.com/yossfmedhat/torchtpu-rag-bench
+%cd torchtpu-rag-bench
+```
 
 ## Cell 1: install and record the environment
 
