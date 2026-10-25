@@ -150,7 +150,7 @@ def load(args, task):
   else:
     name = args.embed_model if task == "embed" else args.rerank_model
     cls = AutoModel if task == "embed" else AutoModelForSequenceClassification
-    model = cls.from_pretrained(name, torch_dtype=torch.float32)
+    model = cls.from_pretrained(name, dtype=torch.float32)
     hf_tok = AutoTokenizer.from_pretrained(name)
 
     def tok(text, text_pair=None, max_length=args.max_len):
